@@ -1,6 +1,6 @@
 //============================================================
-// STUDENT NAME:
-// NUS User ID.:
+// STUDENT NAME: LIU YIFENG
+// NUS User ID.: E0425960 / A0206037N
 // COMMENTS TO GRADER:
 //
 //============================================================
@@ -106,7 +106,7 @@ void DrawDisc( const discType *d )
 
 void MyDisplay( void )
 {
-    glClear( GL_COLOR_BUFFER_BIT );
+    glClear( GL_COLOR_BUFFER_BIT  );
 
     if ( drawWireframe )
         glPolygonMode( GL_FRONT_AND_BACK, GL_LINE );
@@ -116,6 +116,7 @@ void MyDisplay( void )
     for ( int i = 0; i < numDiscs; i++ ) DrawDisc( &disc[i] );
 
     glFlush();  //*** MODIFY THIS ***
+    glutSwapBuffers();
 }
 
 
@@ -281,7 +282,7 @@ int main( int argc, char** argv )
 
     glutInit( &argc, argv );
 
-    glutInitDisplayMode( GLUT_RGB | GLUT_SINGLE );  //*** MODIFY THIS ***
+    glutInitDisplayMode( GLUT_RGB | GLUT_DOUBLE );  //*** MODIFY THIS ***
 
     glutInitWindowSize( winWidth, winHeight );
     glutCreateWindow( "main" );
